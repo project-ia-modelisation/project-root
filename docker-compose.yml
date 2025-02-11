@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  model-training:
+    build: 
+      context: https://github.com/project-ia-modelisation/model-training.git
+      dockerfile: DockerFile
+    networks:
+      - mynetwork
+
+  model-serving:
+    build:
+      context: https://github.com/project-ia-modelisation/model-serving.git
+      dockerfile: DockerFile
+    ports:
+      - "5000:5000"
+    depends_on:
+      - model-training
+    networks:
+      - mynetwork
+  
+  deployment:
+    build:
+      context: https://github.com/project-ia-modelisation/deployment.git
+      dockerfile: DockerFile
+    ports:
+      - "8000:8000"  # Expose l'API si nécessaire
+    depends_on:
+      - model-serving
+    networks:
+      - mynetwork
+  
+  experiments:
+    build:
+      context: https://github.com/project-ia-modelisation/experiments.git
+      dockerfile: DockerFile
+    depends_on:
+      - model-training
+    networks:
+      - mynetwork
+  
+  data-processing:
+    build:
+      context: https://github.com/project-ia-modelisation/data-processing.git
+      dockerfile: DockerFile
+    depends_on:
+      - model-training
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
