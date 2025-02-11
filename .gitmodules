@@ -1,0 +1,15 @@
+[submodule "deployment"]
+	path = deployment
+	url = https://github.com/project-ia-modelisation/deployment.git
+[submodule "experiments"]
+	path = experiments
+	url = https://github.com/project-ia-modelisation/experiments.git
+[submodule "model-serving"]
+	path = model-serving
+	url = https://github.com/project-ia-modelisation/model-serving.git
+[submodule "model-training"]
+	path = model-training
+	url = https://github.com/project-ia-modelisation/model-training.git
+[submodule "data-processing"]
+	path = data-processing
+	url = https://github.com/project-ia-modelisation/data-processing.git
