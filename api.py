@@ -8,6 +8,7 @@ sys.path.append(os.path.abspath("./data-processing"))
 sys.path.append(os.path.abspath("./visualisation"))
 sys.path.append(os.path.abspath("./experiments"))
 sys.path.append(os.path.abspath("./deployment"))
+sys.path.append(os.path.dirname(os.path.abspath(__file__)) + "/..")
 
 from model_serving.script.evaluate import evaluate_model, load_preprocessed_model
 from model_serving.script.generate import generate_and_save_model
