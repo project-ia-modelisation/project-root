@@ -4,15 +4,15 @@
 [submodule "experiments"]
 	path = experiments
 	url = https://github.com/project-ia-modelisation/experiments.git
-[submodule "model-serving"]
-	path = model-serving
-	url = https://github.com/project-ia-modelisation/model-serving.git
-[submodule "model-training"]
-	path = model-training
-	url = https://github.com/project-ia-modelisation/model-training.git
 [submodule "data-processing"]
 	path = data-processing
 	url = https://github.com/project-ia-modelisation/data-processing.git
-[submodule "visualisation"]
-	path = visualisation
-	url = https://github.com/project-ia-modelisation/visualisation.git
+[submodule "visualize"]
+	path = visualize
+	url = https://github.com/project-ia-modelisation/visualize.git
+[submodule "model_training"]
+	path = model_training
+	url = https://github.com/project-ia-modelisation/model_training.git
+[submodule "model_serving"]
+	path = model_serving
+	url = https://github.com/project-ia-modelisation/model_serving.git
